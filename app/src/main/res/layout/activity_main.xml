@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ffield"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/topGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/marginSizeTopLeft" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/centerGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/centerPercentage" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/leftGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/marginSizeTopLeft" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/rightGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="@dimen/marginSizeBottomRight" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottomGuide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="@dimen/marginSizeBottomRight" />
+
+    <TextView
+        android:id="@+id/teamA"
+        style="@style/teamStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/teamA"
+        app:layout_constraintBottom_toTopOf="@id/team_a_score"
+        app:layout_constraintEnd_toStartOf="@id/centerGuide"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/topGuide"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/team_a_score"
+        style="@style/scoreStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@id/tdButtonA"
+        app:layout_constraintEnd_toStartOf="@id/centerGuide"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/teamA" />
+
+    <Button
+        android:id="@+id/tdButtonA"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:onClick="addSixForTeamA"
+        android:text="@string/touchdown"
+        app:layout_constraintBottom_toTopOf="@id/epButtonA"
+        app:layout_constraintEnd_toStartOf="@id/centerGuide"
+        app:layout_constraintHeight_max="36dp"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/team_a_score"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <Button
+        android:id="@+id/epButtonA"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:onClick="addOneForTeamA"
+        android:text="@string/extraPoint"
+        app:layout_constraintBottom_toTopOf="@id/tpcButtonA"
+        app:layout_constraintEnd_toStartOf="@id/centerGuide"
+        app:layout_constraintHeight_max="36dp"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/tdButtonA"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <Button
+        android:id="@+id/tpcButtonA"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:onClick="addTwoForTeamA"
+        android:text="@string/twoPoint"
+        app:layout_constraintBottom_toTopOf="@id/fgButtonA"
+        app:layout_constraintEnd_toStartOf="@id/centerGuide"
+        app:layout_constraintHeight_max="36dp"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/epButtonA" />
+
+    <Button
+        android:id="@+id/fgButtonA"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:onClick="addThreeForTeamA"
+        android:text="@string/fieldGoal"
+        app:layout_constraintBottom_toTopOf="@id/sButtonA"
+        app:layout_constraintEnd_toStartOf="@id/centerGuide"
+        app:layout_constraintHeight_max="36dp"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/tpcButtonA" />
+
+    <Button
+        android:id="@+id/sButtonA"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:onClick="addTwoForTeamA"
+        android:text="@string/safety"
+        app:layout_constraintBottom_toTopOf="@id/resetButton"
+        app:layout_constraintEnd_toStartOf="@id/centerGuide"
+        app:layout_constraintHeight_max="36dp"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/fgButtonA" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="@id/sButtonA"
+        app:layout_constraintLeft_toRightOf="@+id/centerGuide"
+        app:layout_constraintTop_toBottomOf="@id/topGuide" />
+
+    <TextView
+        android:id="@+id/teamB"
+        style="@style/teamStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/teamB"
+        app:layout_constraintBottom_toTopOf="@id/team_b_score"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintStart_toStartOf="@id/centerGuide"
+        app:layout_constraintTop_toBottomOf="@id/topGuide"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/team_b_score"
+        style="@style/scoreStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toTopOf="@id/tdButtonB"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintStart_toStartOf="@id/centerGuide"
+        app:layout_constraintTop_toBottomOf="@id/teamB" />
+
+    <Button
+        android:id="@+id/tdButtonB"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:onClick="addSixForTeamB"
+        android:text="@string/touchdown"
+        app:layout_constraintBottom_toTopOf="@id/epButtonB"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintHeight_max="36dp"
+        app:layout_constraintStart_toStartOf="@id/centerGuide"
+        app:layout_constraintTop_toBottomOf="@id/team_b_score" />
+
+    <Button
+        android:id="@+id/epButtonB"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:onClick="addOneForTeamB"
+        android:text="@string/extraPoint"
+        app:layout_constraintBottom_toTopOf="@id/tpcButtonB"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintHeight_max="36dp"
+        app:layout_constraintStart_toStartOf="@id/centerGuide"
+        app:layout_constraintTop_toBottomOf="@id/tdButtonB" />
+
+    <Button
+        android:id="@+id/tpcButtonB"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:onClick="addTwoForTeamB"
+        android:text="@string/twoPoint"
+        app:layout_constraintBottom_toTopOf="@id/fgButtonB"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintHeight_max="36dp"
+        app:layout_constraintStart_toStartOf="@id/centerGuide"
+        app:layout_constraintTop_toBottomOf="@id/epButtonB"
+
+        />
+
+    <Button
+        android:id="@+id/fgButtonB"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:onClick="addThreeForTeamB"
+        android:text="@string/fieldGoal"
+        app:layout_constraintBottom_toTopOf="@id/sButtonB"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintHeight_max="36dp"
+        app:layout_constraintStart_toStartOf="@id/centerGuide"
+        app:layout_constraintTop_toBottomOf="@id/tpcButtonB" />
+
+    <Button
+        android:id="@+id/sButtonB"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:onClick="addTwoForTeamB"
+        android:text="@string/safety"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintHeight_max="36dp"
+        app:layout_constraintStart_toStartOf="@id/centerGuide"
+        app:layout_constraintTop_toBottomOf="@id/fgButtonB" />
+
+    <Button
+        android:id="@+id/resetButton"
+        style="@style/buttonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:onClick="resetScores"
+        android:text="@string/resetButton"
+        app:layout_constraintBottom_toTopOf="@id/bottomGuide"
+        app:layout_constraintEnd_toStartOf="@id/rightGuide"
+        app:layout_constraintHeight_max="36dp"
+        app:layout_constraintStart_toStartOf="@id/leftGuide"
+        app:layout_constraintTop_toBottomOf="@id/sButtonA" />
+</android.support.constraint.ConstraintLayout>

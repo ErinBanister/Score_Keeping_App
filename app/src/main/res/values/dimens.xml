@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="marginSizeTopLeft">0.05</dimen>
+    <dimen name="marginSizeBottomRight">0.95</dimen>
+    <dimen name="centerPercentage">0.50</dimen>
+</resources>

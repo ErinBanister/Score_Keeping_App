@@ -1,0 +1,20 @@
+<resources>
+    <!--Application name-->
+    <string name="app_name">Football Scorecard</string>
+    <!--Touchdown button text-->
+    <string name="touchdown">Touchdown</string>
+    <!--Extra Point button text-->
+    <string name="extraPoint">Extra Point</string>
+    <!--Two-Point Conversion down button text-->
+    <string name="twoPoint">Two-Point\nConversion</string>
+    <!--Field Goal button text-->
+    <string name="fieldGoal">Field Goal</string>
+    <!--Safety button text-->
+    <string name="safety">Safety</string>
+    <!--Reset button text-->
+    <string name="resetButton">Reset</string>
+    <!--Team A Name-->
+    <string name="teamA">Broncos</string>
+    <!--Team B Name-->
+    <string name="teamB">Raiders</string>
+</resources>
